@@ -1,4 +1,4 @@
-# Common docs, scripts and code samples for android master, chat app.
+## Common docs, scripts and code samples for android master, chat app.
 
 Setup Android Studio using the links below
 
