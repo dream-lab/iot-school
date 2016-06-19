@@ -12,7 +12,7 @@ https://developer.android.com/studio/install.html
 ## Geny Motion (Android Emulator)
 https://www.genymotion.com/
 
-## MQTT Client Library - dependency
+## IISC MQTT Client Library - dependency
 1. Add this in your root (Project) level build.gradle, at the end of repositories
 	```
 	allprojects {
@@ -24,7 +24,7 @@ https://www.genymotion.com/
 
 	```
 
-2. Add this in your app (Module) level build.gradle. at the end of dependencies
+2. Add this in your app (Module) level build.gradle, at the end of dependencies
 	```
 	dependencies {
     ...
