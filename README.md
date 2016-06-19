@@ -1,4 +1,4 @@
-** Files related to [IISc MSR IoT Summer School](http://research.microsoft.com/en-us/events/msri_ss_2016/) **
+__[IISc MSR IoT Summer School](http://research.microsoft.com/en-us/events/msri_ss_2016/)__
 
 # Tutorial Schedule [Tentative]
 
@@ -50,4 +50,31 @@ Following the tutorials, teams of 4 will be formed with 2 students from each tra
 
 
 # Tasks for Participants
+- **Before arriving/At start of Day 1**
+  - Subscribe to Mailing list: (https://groups.google.com/forum/#!forum/iot_summer_school_2016)
+  - Get connected to guest WiFi at IISc (will be announced at opening session/watch the white board outside CDS 102)
+  - Have your Laptop with following software installed
+    * Git or GitHub client
+    * SSH Client supporting proxy (e.g PuttY for Windows, Corkscrew for Linux)
+    * SW&A track
+      - Java IDE such as Eclipse, IntelliJ
+      - Java JDK 7 or later
+      - Apache Maven
+      - Python
+      - R Studio
+      - Android Studio (optional)
+    * S&C Track
+      - Ubuntu OS prefered
+      - ...?
+  - GitHub
+    - Request commit access to summer school GitHub site: https://github.com/dream-lab/iot-school
+    - Clone the GitHub common folder to your laptop, https://github.com/dream-lab/iot-school/tree/master/common
+
+- **By start of Day 2**
+  * Pick a team (2 from Sensing/Comm, 2 from SW/Analytics) and a team name. 
+  * Create a folder with your team name on GitHub under https://github.com/dream-lab/iot-school/tree/master/teams. Create a file "members.txt" in your team folder with the name, affiliation and email address of your team members.
+  * Pick up Raspberry Pi and Azure VM account information for your team
+
+- **By end of Day 2**
+  * Pick a project topic to work on. Pick up sensors required for your project. Identify mentor for your project.
 
