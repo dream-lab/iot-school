@@ -23,12 +23,7 @@
 	To run:		$ cd target/
 				$ ls (to find "siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar" file)
 				$ java -cp siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar <Query Argument>
-				
-3. Python MQTT scripts:
-	
-	Required: 	python 2.7
-				pip
-				paho-mqtt (pip install paho-mqtt)
+			
 				
 	
 	
