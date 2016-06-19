@@ -15,17 +15,20 @@ Common docs, scripts and code samples for siddhi cep.
 	
 2. Build siddhi-mqtt project:
 	
-	Required:   	jdk 1.7
+	Required:   	
+			jdk 1.7
 			
 			maven >=3.0.5
 				
-	To build: 	$ cd siddh-mqtt/
+	To build: 	
+			$ cd siddh-mqtt/
 
 			$ ls (to find "pom.xml" file that contain list of maven dependencies)
 			
 			$ mvn clean compile package -Dmaven.test.skip=true
 				
-	To run:		$ cd target/
+	To run:		
+			$ cd target/
 	
 			$ ls (to find "siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar" file)
 			
