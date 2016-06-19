@@ -1,0 +1,36 @@
+Instructions to run on linux machine
+
+------------------------------------------------------------
+
+PreReq for Running
+  -Make sure'temperature.csv' exists 
+in the current directry when publishing temperature values
+  -Optionally : 'broker.properties' file in the current directory can be edited if you want to connect to a different broker
+
+1)Navigate to mqqt/demo_jars
+ 
+
+
+
+2)Commands for running jars
+
+
+
+Publishing Temperature Values
+
+->java -cp PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
+
+Calculating 
+
+Average Temperature Values
+
+->java -cp CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
+
+
+
+Subscribing to Average Temperature Value Results
+
+->java -cp SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
+
+
+Note : can also be executed from corresponding target directories
