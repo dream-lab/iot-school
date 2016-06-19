@@ -20,7 +20,7 @@ Following the tutorials, teams of 4 will be formed with 2 students from each tra
 - Joint session for tracks: Team formation, project idea discussion *(Yogesh, CDS)* [30mins]
 
 ### Day 2, Tue 21 June from 330-630PM
-- Joint session of both tracks: Using Pi & Azure VM by teams *(Yogesh, CDS)* [30mins]
+- Joint session of both tracks: Using Pi & Azure VM by teams *(Anshu & Vyshak, CDS)* [30mins]
 - Wireless Networking and Communication standards *(Akshay and Anand, ECE)* [150mins]
   * Power, standards, motes/WSN, 6lowpan, mesh NW
   * IPv6, routing, RPL, CoAP, MQTT
@@ -39,7 +39,7 @@ Following the tutorials, teams of 4 will be formed with 2 students from each tra
 - Joint session for tracks: Team formation, project idea discussion *(Yogesh, CDS)* [30mins]
 
 ### Day 2, Tue 21 June from 330-630PM
-- Joint session of both tracks: Using Pi & Azure VM by teams *(Yogesh, CDS)* [30mins]
+- Joint session of both tracks: Using Pi & Azure VM by teams *(Anshu & Vyshak, CDS)* [30mins]
 - Stream processing using Apache Storm *(Anshu, CDS)* [60 mins]
   * Hands on: Run Apache Storm IoT topology from Azure VM
 - Pub-Sub on Android using IISc Notification Platform *(Abhilash, CDS)* [30mins]
