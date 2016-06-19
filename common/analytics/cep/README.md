@@ -1,5 +1,3 @@
-Common docs, scripts and code samples for siddhi cep.
-
 1. Siddhi Dependencies:
 
 	Maven Repository for Siddhi built-in jars: 
@@ -15,22 +13,34 @@ Common docs, scripts and code samples for siddhi cep.
 	
 2. Build siddhi-mqtt project:
 	
-	Required:   	
-		        jdk 1.7
-			
-		        maven >=3.0.5
+	Required:   
+                        
+			jdk 1.7
+                        
+			maven >=3.0.5
 				
 	To build: 	
-		        $ cd siddh-mqtt/
+
+			$ cd siddh-mqtt/
 			
-		        $ ls (to find "pom.xml" file that contain list of maven dependencies)
-		        
-		        $ mvn clean compile package -Dmaven.test.skip=true
+			$ ls (to find "pom.xml" file that contain list of maven dependencies)
+			
+			$ mvn clean compile package -Dmaven.test.skip=true
 				
 	To run:		
-		        $ cd target/
+	
+			$ cd target/
 			
-		        $ ls (to find "siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar" file)
+			$ ls (to find "siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar" file)
 			
-		        $ java -cp siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar <Query Argument>
+			$ java -cp siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar <Query Argument>
+				
+3. Python MQTT scripts:
+	
+	Required: 	
 			
+			python 2.7
+			
+			pip
+			
+			paho-mqtt (pip install paho-mqtt)
