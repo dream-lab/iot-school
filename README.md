@@ -10,7 +10,7 @@ Following the tutorials, teams of 4 will be formed with 2 students from each tra
 ### Day 1, Mon 20 June from 3-630PM
 - Joint session of both tracks: Introduction to the Tutorials *(Yogesh, CDS)* [15mins]
 - Practical Sensing *(Ashish, RBCCPS)* [60mins]
-  * Types of sensors, properties, PCB design, UART
+  * Types of sensors, properties, interfacing techniques, protocols
 -  Acquiring sensor data *(Akshay and Anand, ECE)* [40 mins]
   * Getting data from Sensor to Pi, and Sensor to Contiki to Pi
   * Hands on: Read data from sensor thru Laptop/Pi and Contiki
