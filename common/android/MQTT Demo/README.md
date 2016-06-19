@@ -24,7 +24,7 @@ https://www.genymotion.com/
 
 	```
 
-2. Add this in your app (Module) level build.gradle. at the end of dependencies
+2. Add this in your app (Module) level build.gradle, at the end of dependencies
 	```
 	dependencies {
     ...
