@@ -37,15 +37,16 @@
 		Subscribe to siddhi output: rajrupghosh/demo/siddhi/agg_temp
 	
 	QUERY Types:
-		1. filter
-		2. agg_len_sli
-		3. agg_len_bat
-		4. agg_time_sli
-		5. agg_time_bat
-		6. sequence
-		7. pattern
+		1. filter	(Filter Query)
+		2. agg_len_sli	(Aggregate on Window Length Count Sliding)
+		3. agg_len_bat	(Aggregate on Window Length Count Batch)
+		4. agg_time_sli	(Aggregate on Window Time Count Sliding)
+		5. agg_time_bat	(Aggregate on Window Time Count Batch)
+		6. sequence	(Sequence Query)
+		7. pattern	(Pattern Query)
 	
 	Example:
+	
 	Step 1: To publish publish temperature
 	
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature <topic name>
