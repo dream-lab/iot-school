@@ -5,16 +5,17 @@ Instructions to run on linux machine : After installing all pre reqs(Java 7)
 ------------------------------------------------------------
 
 PreReq for Running
-  -Make sure'temperature.csv' exists in the current directry when publishing temperature values
-  -Optionally : 'broker.properties' file in the current directory can be edited if you want to connect to a different broker
+		Make sure'temperature.csv' exists in the current directry when publishing temperature values
+		Optionally : 'broker.properties' file in the current directory can be edited if you want to connect to a different broker
 
-1)Navigate to mqtt/demo_jars
+1)Navigate to MQTT/demo_jars
  
 2)Commands for running jars
 
 Publishing Temperature Values
 
 		->java -cp PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
+		
 (Optional : Relative path of the 'temperature.csv' file)
 
 Calculating Average Temperature Values
@@ -61,9 +62,11 @@ Required:
 
 To run PublishTemperature:
 (Optional : Relative path of the 'temperature.csv' file)
+
 		$java -cp target/PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
 
 5. To run CalculateAvgTemp:	
+
 		$java -cp target/CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
 
 6. To run SubscribeAvgTemp:		
