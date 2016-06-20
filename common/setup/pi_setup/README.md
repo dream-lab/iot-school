@@ -63,7 +63,7 @@
 		password="iotss@2016"
 		phase1="peapver=0"
 		phase2="auth=MSCHAPV2"
-	}
+		}
 	
 3. SSH to Raspberry Pi
 
@@ -72,7 +72,7 @@
 	 
 	 	or
 	 
-		$ ssh pi@192.168.1.1     (After connecting Raspberry Pi with lan cable provided)
+		$ ssh pi@192.168.1.1     (After connecting your Laptop and Raspberry Pi with lan cable provided)
 		password: raspberry
 
 
