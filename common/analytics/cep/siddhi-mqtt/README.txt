@@ -35,19 +35,31 @@
 		Siddhi subscribes: rajrupghosh/demo/temperature
 		Siddhi publishes under Topic (if query is aggregate): rajrupghosh/demo/siddhi/agg_temp
 		Subscribe to siddhi output: rajrupghosh/demo/siddhi/agg_temp
-		
+	
+	QUERY Types:
+		1. filter
+		2. agg_len_sli
+		3. agg_len_bat
+		4. agg_time_sli
+		5. agg_time_bat
+		6. sequence
+		7. pattern
+	
 	Example:
 	Step 1: To publish publish temperature
+	
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature <topic name>
 		
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature rajrupghosh/demo/temperature
 		
 	Step 2: To run Siddhi
+	
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar cds.iisc.SiddhiAnalytics <query type> <temperature topic name> <siddhi output topic name>
 		
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar cds.iisc.SiddhiAnalytics filter rajrupghosh/demo/temperature rajrupghosh/demo/siddhi/filter_temperature
 		
 	Step 3: To subscribe to Siddhi Output
+	
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeQueryTemp <siddhi output topic name>
 
 		$ java -cp target/siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeQueryTemp rajrupghosh/demo/siddhi/filter_temperature	
