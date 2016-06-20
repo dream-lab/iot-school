@@ -45,5 +45,5 @@
 			
 			paho-mqtt (pip install paho-mqtt)
 
-4. Some more guide lines for Today's DEMO have been mentioned in siddhi-mqtt/README.txt
+4. Some more guide lines for Today's DEMO have been mentioned in siddhi-mqtt/INSTRUCTIONS.txt
  
