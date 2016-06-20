@@ -65,13 +65,15 @@
 		phase2="auth=MSCHAPV2"
 	}
 	
-3. $ ssh pi@<Static IP>
-	 password: raspberry
+3. SSH to Raspberry Pi
+
+		$ ssh pi@<Static IP>
+		password: raspberry
 	 
-	 or
+	 	or
 	 
-   $ ssh pi@192.168.1.1     (After connecting Raspberry Pi with lan cable provided)
-   	 password: raspberry
+		$ ssh pi@192.168.1.1     (After connecting Raspberry Pi with lan cable provided)
+		password: raspberry
 
 
 	 
