@@ -69,5 +69,6 @@ To run PublishTemperature:
 
 		$java -cp target/CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
 
-6. To run SubscribeAvgTemp:		
+6. To run SubscribeAvgTemp:
+
 		$java -cp target/SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
