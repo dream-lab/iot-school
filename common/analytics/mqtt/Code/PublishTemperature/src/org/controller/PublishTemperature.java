@@ -30,6 +30,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.Random;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -47,15 +48,17 @@ public class PublishTemperature {
 	static String Password = "iotsummer";
 
 	static String Topic = "demo/temperature";
-	static String ClientId = "demoPublisher";
+	static String ClientId;
 
 	public static void main(String[] args) throws Exception {
 
 		MemoryPersistence persistence = new MemoryPersistence();
-
+		ClientId = String.valueOf(new Random().nextInt(500000));
 		try {
 
 			initCredentials();
+			
+
 			String topicName = Topic;
 			String content;
 
@@ -76,7 +79,7 @@ public class PublishTemperature {
 				content = getJSONContentFromFile(args);
 				System.out.print("Publishing topic : " + topicName);
 				MqttMessage message = new MqttMessage(content.getBytes());
-				System.out.println(" To : " + BrokerURL + " : Publishing message: " + content);
+				System.out.println(" To : " + BrokerURL + " : Publishing message:" + content);
 				message.setQos(qos);
 				mqttClient.publish(topicName, message);
 				Thread.sleep(3000);
@@ -162,7 +165,6 @@ public class PublishTemperature {
 				UserName = prop.getProperty("username");
 			if (prop.getProperty("password") != null)
 				Password = prop.getProperty("password");
-
 
 		} catch (FileNotFoundException e) {
 

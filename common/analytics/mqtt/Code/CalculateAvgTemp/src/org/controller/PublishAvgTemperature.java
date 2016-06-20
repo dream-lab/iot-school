@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.Random;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -20,12 +21,13 @@ public class PublishAvgTemperature {
 	static String Password = "iotsummer";
 
 	static String Topic = "demo/temperature/average";
-	static String ClientId = "AverageCalculatorPublisher1";
+	static String ClientId ;
 
 	public static void publishResults(Double result) throws Exception {
 
 		MemoryPersistence persistence = new MemoryPersistence();
 		initCredentials();
+		ClientId = String.valueOf(new Random().nextInt());
 		try {
 
 			String topicName = Topic;

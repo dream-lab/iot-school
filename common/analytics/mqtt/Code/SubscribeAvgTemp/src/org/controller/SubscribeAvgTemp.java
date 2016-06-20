@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.Random;
 
 /**
 +---------------+------+---------+
@@ -41,7 +42,7 @@ public class SubscribeAvgTemp implements MqttCallback {
 	static String Password = "iotsummer";
 
 	static String Topic = "demo/temperature/average";
-	static String ClientId = "demosubcriber";
+	static String ClientId ;
 
 	MqttClient client;
 
@@ -49,6 +50,7 @@ public class SubscribeAvgTemp implements MqttCallback {
 	}
 
 	public static void main(String[] args) {
+		ClientId = String.valueOf(new Random().nextInt());
 		new SubscribeAvgTemp().checkCallBack(args);
 	}
 
