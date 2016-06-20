@@ -25,7 +25,8 @@
 	To run:		
 			$ cd target/
 			$ ls (to find "siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar" file)
-			$ java -cp siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar <Query Argument>
+			$ java -cp siddhi-mqtt-1.0-SNAPSHOT-jar-with-dependencies.jar <Query Argument> <Input Topic> <Output Topic>
+			
 3. Publish and Subscribe using MQTT:
 	
 	Please do publish under your name:
