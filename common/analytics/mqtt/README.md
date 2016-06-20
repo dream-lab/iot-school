@@ -45,30 +45,30 @@ Maven Repository for Paho built-in jars:
 For maven dependencies:
 Look for pom.xml file in respective folders
 
-2. Build Process:
+Build Process:
 	
 Required:   
 -jdk 1.7
 -maven >=3.0.5
 	
-3. To build: 	
+To build: 	
 
 (cd Individual project folders that you want to build ;PublishTemperature; CalculateAvgTemp; SubscribeAvgTemp)
 
 		$ ls (to find "pom.xml" file that contain list of maven dependencies)
 		$ mvn clean compile package -Dmaven.test.skip=true
 
-4. To run projects after reaching corresponding project folders
+To run projects after reaching corresponding project folders
 
 To run PublishTemperature:
 (Optional : Relative path of the 'temperature.csv' file)
 
 		$java -cp target/PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
 
-5. To run CalculateAvgTemp:	
+To run CalculateAvgTemp:	
 
 		$java -cp target/CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
 
-6. To run SubscribeAvgTemp:
+To run SubscribeAvgTemp:
 
 		$java -cp target/SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
