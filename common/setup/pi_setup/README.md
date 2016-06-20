@@ -2,6 +2,7 @@
 	a. Put 10proxy file in '/etc/apt/apt.conf.d/' folder. If file is not present create one.
 	
 	Content: 
+		
 		Acquire::http::Proxy "http://proxy.iisc.ernet.in:3128";
 		Acquire::https::Proxy "https://proxy.iisc.ernet.in:3128";
 		Acquire::ftp::Proxy "ftp://proxy.iisc.ernet.in:3128";
@@ -9,6 +10,7 @@
 	b. 	Change your '.bashrc' file to export proxy. Sample '.bashrc' file has been attached
 	
 	Append at the end 3 lines:
+		
 		export http_proxy="http://proxy.iisc.ernet.in:3128"
 		export https_proxy="https://proxy.iisc.ernet.in:3128"
 		export ftp_proxy="http://proxy.iisc.ernet.in:3128"
