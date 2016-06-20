@@ -14,16 +14,16 @@ PreReq for Running
 
 Publishing Temperature Values
 
-->java -cp PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
+		->java -cp PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
 (Optional : Relative path of the 'temperature.csv' file)
 
 Calculating Average Temperature Values
 
-->java -cp CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
+		->java -cp CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
 
 Subscribing to Average Temperature Value Results
 
-->java -cp SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
+		->java -cp SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
 
 
 Note : can also be executed from corresponding target directories ; refer below on how to build from source
@@ -39,7 +39,7 @@ Dependencies:
 
 Maven Repository for Paho built-in jars:
 
-https://repo.eclipse.org/content/repositories/paho-releases/
+		https://repo.eclipse.org/content/repositories/paho-releases/
 	
 For maven dependencies:
 Look for pom.xml file in respective folders
@@ -54,17 +54,17 @@ Required:
 
 (cd Individual project folders that you want to build ;PublishTemperature; CalculateAvgTemp; SubscribeAvgTemp)
 
-$ ls (to find "pom.xml" file that contain list of maven dependencies)
-$ mvn clean compile package -Dmaven.test.skip=true
+		$ ls (to find "pom.xml" file that contain list of maven dependencies)
+		$ mvn clean compile package -Dmaven.test.skip=true
 
 4. To run projects after reaching corresponding project folders
 
 To run PublishTemperature:
 (Optional : Relative path of the 'temperature.csv' file)
-$java -cp target/PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
+		$java -cp target/PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
 
 5. To run CalculateAvgTemp:	
-$java -cp target/CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
+		$java -cp target/CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
 
 6. To run SubscribeAvgTemp:		
-$java -cp target/SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
+		$java -cp target/SubscribeAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeAvgTemp
