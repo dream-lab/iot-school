@@ -13,9 +13,7 @@ Publishing Temperature Values
 
 ->java -cp PublishTemperature-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.PublishTemperature
 
-Calculating 
-
-Average Temperature Values
+Calculating Average Temperature Values
 
 ->java -cp CalculateAvgTemp-0.0.1-SNAPSHOT-jar-with-dependencies.jar org.controller.SubscribeTemperature
 
