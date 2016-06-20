@@ -1,5 +1,7 @@
 package cds.iisc;
 
+import java.util.Random;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -31,7 +33,8 @@ public class Sub_Temperature implements MqttCallback {
 	}
 
 	private void initSub() {
-		SubID = "Siddhi_Sub";
+		Random rn = new Random();
+		SubID = "Siddhi_Sub"+rn.nextInt();
 
 		SubConnOpt = new MqttConnectOptions();
 		SubConnOpt.setCleanSession(true);

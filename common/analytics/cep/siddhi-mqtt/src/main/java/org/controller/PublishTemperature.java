@@ -30,6 +30,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.Random;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -45,9 +46,9 @@ public class PublishTemperature {
 	static String BrokerURL = "tcp://iotsummerschoolmqttbroker.cloudapp.net:1883";
 	static String UserName = "iotsummer";
 	static String Password = "iotsummer";
-
+	static Random rn = new Random();
 	static String Topic = "demo/temperature";
-	static String ClientId = "demoPublisher";
+	static String ClientId = "demoPublisher"+rn.nextInt();
 
 	public static void main(String[] args) throws Exception {
 
@@ -57,6 +58,12 @@ public class PublishTemperature {
 
 			initCredentials();
 			String topicName = Topic;
+			
+			if(args.length>=1)
+				topicName = args[0];
+			if(args.length>=2)
+				ClientId=args[1];
+			
 			String content;
 
 			int qos = 2;
@@ -70,7 +77,7 @@ public class PublishTemperature {
 
 			System.out.println("Connecting to broker: " + BrokerURL);
 			mqttClient.connect(connOpts);
-			System.out.println("Connected");
+			System.out.println(ClientId+" Connected");
 
 			while (true) {
 				content = getJSONContentFromFile(args);
@@ -100,8 +107,8 @@ public class PublishTemperature {
 
 		String csvFile = System.getProperty("user.dir") + "/temperature.csv";
 
-		if (args.length > 0)
-			csvFile = args[0];
+//		if (args.length > 0)
+//			csvFile = args[0];
 
 		BufferedReader br = null;
 		String line = "";

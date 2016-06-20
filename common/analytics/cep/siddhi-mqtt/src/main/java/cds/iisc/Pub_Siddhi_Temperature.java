@@ -1,5 +1,7 @@
 package cds.iisc;
 
+import java.util.Random;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -32,7 +34,8 @@ public class Pub_Siddhi_Temperature  implements MqttCallback
 	public void initPub()
 	{
 		persistence = new MemoryPersistence();
-		PubID = "Siddhi_Pub";	
+		Random rn = new Random();
+		PubID = "Siddhi_Pub"+rn.nextInt();	
 		
 		PubConnOpt = new MqttConnectOptions();
 		PubConnOpt.setCleanSession(true);

@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.Random;
 
 /**
 +---------------+------+---------+
@@ -39,9 +40,9 @@ public class SubscribeQueryTemp implements MqttCallback {
 	static String BrokerURL = "tcp://iotsummerschoolmqttbroker.cloudapp.net:1883";
 	static String UserName = "iotsummer";
 	static String Password = "iotsummer";
-
+	static Random rn = new Random();
 	static String Topic = "demo/siddhi/temperature";
-	static String ClientId = "demosubcriber";
+	static String ClientId = "demosubcriber"+rn.nextInt();
 
 	MqttClient client;
 
@@ -57,8 +58,10 @@ public class SubscribeQueryTemp implements MqttCallback {
 		try {
 			
 			String topicName = Topic;
-			if (args.length > 0)
+			if (args.length>=1)
 				topicName = args[0];
+			if (args.length>=2)
+				ClientId=args[1];
 
 			System.out.println("Subscription topic : " + topicName);
 
