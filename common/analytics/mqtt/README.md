@@ -5,7 +5,9 @@ Instructions to run on linux machine : After installing all pre reqs(Java 7)
 ------------------------------------------------------------
 
 PreReq for Running
+
 		Make sure'temperature.csv' exists in the current directry when publishing temperature values
+
 		Optionally : 'broker.properties' file in the current directory can be edited if you want to connect to a different broker
 
 1)Navigate to MQTT/demo_jars
