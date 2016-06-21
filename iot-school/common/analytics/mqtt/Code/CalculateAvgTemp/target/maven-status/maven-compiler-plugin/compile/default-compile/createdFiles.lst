@@ -1,0 +1,5 @@
+org/senml/data/SenML.class
+org/controller/SubscribeTemperature.class
+org/controller/CalculateAverage.class
+org/controller/PublishAvgTemperature.class
+org/senml/data/MqttEvent.class
