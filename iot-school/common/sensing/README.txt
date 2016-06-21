@@ -1,1 +1,0 @@
-Common docs, scripts and code samples for sensors, contiki, sensor access from Pi.

@@ -1,1 +1,0 @@
-Common docs, scripts and code samples for WSN, motes, coap from Pi.

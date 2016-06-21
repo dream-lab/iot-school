@@ -1,3 +1,0 @@
-Acquire::http::Proxy "http://proxy.iisc.ernet.in:3128";
-Acquire::https::Proxy "https://proxy.iisc.ernet.in:3128";
-Acquire::ftp::Proxy "ftp://proxy.iisc.ernet.in:3128";

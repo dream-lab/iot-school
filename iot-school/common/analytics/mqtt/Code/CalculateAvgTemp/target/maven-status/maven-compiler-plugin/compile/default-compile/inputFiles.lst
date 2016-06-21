@@ -1,5 +1,0 @@
-/home/broker/demo_workspace/CalculateAvgTemp/src/org/controller/CalculateAverage.java
-/home/broker/demo_workspace/CalculateAvgTemp/src/org/senml/data/SenML.java
-/home/broker/demo_workspace/CalculateAvgTemp/src/org/controller/PublishAvgTemperature.java
-/home/broker/demo_workspace/CalculateAvgTemp/src/org/controller/SubscribeTemperature.java
-/home/broker/demo_workspace/CalculateAvgTemp/src/org/senml/data/MqttEvent.java

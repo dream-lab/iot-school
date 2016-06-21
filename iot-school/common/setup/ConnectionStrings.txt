@@ -1,5 +1,0 @@
-scp -r -o "ProxyCommand corkscrew proxy.iisc.ernet.in 3128 iotsummerschoolcommon.cloudapp.net 22"  <source-file/dir> iotvm@iotsummerschoolcommon.cloudapp.net:/home/iotvm
-
-ssh  iotvm@iotsummerschoolcommon.cloudapp.net.cloudapp.net -o "ProxyCommand corkscrew proxy.iisc.ernet.in 3128  iotsummerschoolcommon.cloudapp.net  22"
-
-
