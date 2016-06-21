@@ -1,0 +1,3 @@
+org/senml/data/SenML.class
+org/controller/PublishTemperature.class
+org/senml/data/MqttEvent.class
