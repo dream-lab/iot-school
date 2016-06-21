@@ -1,2 +1,2 @@
-Alok Sahu     - Sensing and communication
-Ankit Jauhari - Data analytics and processing
+(a) Alok Sahu     - Sensing and communication
+(b) Ankit Jauhari - Data analytics and processing
