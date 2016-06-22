@@ -1,5 +1,5 @@
 1. SETUP PROXY:
-	a. Put 10proxy file in '/etc/apt/apt.conf.d/' folder. If file is not present create one.
+	a. Put '10proxy' file(obtained while following previous instructions) in '/etc/apt/apt.conf.d/' folder. If file is not present create one.
 	
 	Content: 
 		
