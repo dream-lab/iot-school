@@ -1,0 +1,13 @@
+CREATE TABLE [dbo].[SensorDemo1](	
+	[rowid] [int] NOT NULL,
+	[DeviceId] [nchar](30) NULL,
+	[Time] [datetime] NULL,
+	[Temp1] [float] NULL,
+	[Temp2] [float] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[rowid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
