@@ -1,0 +1,173 @@
+%\documentclass[hyperref={pdfpagelabels=false},handout]{beamer}
+%\documentclass[hyperref={pdfpagelabels=false}]{beamer}
+%\documentclass[12pt,handout]{beamer}
+\documentclass[aspectratio=1610]{beamer}
+
+%\usepackage[utf8x]{inputenc}
+\usepackage{default}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{color}	% to color text
+%\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{gensymb}
+
+
+%\definecolor{light-gray}{gray}{0.80}
+\captionsetup{font=scriptsize,labelfont=scriptsize,labelformat=empty,labelsep=none}
+
+%\usetheme{Copenhagen}
+%\usetheme{Rochester}
+\usecolortheme{beaver}
+
+\definecolor{iiitColor}{rgb}{0.247058824, 0.678431373, 0.658823529}
+\definecolor{iiitColorBackground}{rgb}{0.5, 0.5, 0.5}
+%\definecolor{black}{rgb}{0, 0, 0}	% already defined
+
+%\setbeamercolor{frametitle}{fg=iiitColor, bg=iiitColorBackground}
+\setbeamercolor{frametitle}{fg=iiitColor}
+\setbeamercolor{title}{fg=iiitColor}
+\setbeamercolor{itemize item}{fg=iiitColor}
+\setbeamercolor{description item}{fg=iiitColor}
+\setbeamercolor{itemize subitem}{fg=iiitColor}
+\setbeamercolor{itemize subsubitem}{fg=iiitColor}
+%\setbeamercolor{caption}{fg=iiitColor}
+\setbeamercolor{caption name}{fg=iiitColor}
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[triangle]
+\setbeamertemplate{itemize item}[square]
+\setbeamercolor{enumerate item}{fg=iiitColor}
+\setbeamercolor{enumerate subitem}{fg=iiitColor}
+\setbeamercolor{enumerate subsubitem}{fg=iiitColor}
+\setbeamercolor{item projected}{bg=iiitColor, fg=white}
+%\setbeamertemplate{enumerate item}[square]
+\setbeamercolor{section number projected}{bg=iiitColor}
+
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=iiitColor}
+\setbeamercolor{bibliography entry author}{fg=iiitColor}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry journal}{fg=black}
+\setbeamercolor{bibliography entry note}{fg=black}
+\setbeamercolor{bibliography entry}{fg=black}
+\setbeamercolor{bibliography entry article}{fg=black}
+\setbeamercolor{bibliography entry book}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+
+% \setbeamercolor{palette primary}{fg=yellow,bg=yellow}
+% \setbeamercolor{palette secondary}{use=structure,fg=structure.fg!100!green}
+% \setbeamercolor{palette tertiary}{use=structure,fg=structure.fg!100!green}
+% \setbeamercolor{normal text}{fg=black,bg=white}
+% \setbeamercolor{alerted text}{fg=red}
+% \setbeamercolor{example text}{fg=green!50!black}
+
+
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{bibliography item}[text]
+
+
+
+
+
+%-- logo in the upper right corner
+\addtobeamertemplate{frametitle}{}{%
+	\begin{textblock*}{60mm}(.98\textwidth,-0.72cm)
+		\includegraphics[scale=0.1]{iiitd_logo}
+	\end{textblock*}
+}
+
+
+\newcommand{\MyHookSign}{\hbox{\ensuremath\hookleftarrow}}
+\lstset{
+	commentstyle=\textit,
+	stringstyle=\texttt,
+	basicstyle=\tiny, %\small,
+	tabsize=4,
+	tab=$\to$,
+	float=tbph,
+	extendedchars,
+	breaklines,
+	prebreak={\space\MyHookSign},
+	frame=single,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	keywordstyle=\bfseries,
+	identifierstyle=\ttfamily,
+	stringstyle=,
+	captionpos=b,
+	aboveskip=\bigskipamount,
+	language=c,
+	numbersep=4pt,
+	numbers=left,
+	numberstyle=\tiny,
+	literate={~} {$\sim$}{1},
+	escapeinside={(*@}{@*)}
+}
+
+	
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}	% replace the number of footnotes with a star
+
+\newcommand{\sabsi}{Sabjiwalla\xspace}
+
+\title{Captain Planet}
+\subtitle{\sabsi}
+\titlegraphic{\includegraphics[scale=0.2]{iiitd_logo.pdf}}
+%\institute{IIIT-D}
+\date{June $25^{\text{th}}$, 2016}
+\keywords{lecture slides, Embedded Logic Design, Indraprastha Institute of Information Technology, IIIT, IIITD}
+\author[Amogh, Himani, Anupriya, Nipun, Puneet, Alex]{Amogh, Himani, Anupriya, Nipun, Puneet, Alex}
+
+\begin{document}
+
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+
+\section{Our Project}
+\begin{frame}
+	\frametitle{Our Project}
+	Smart Fridges
+	\begin{description}
+		\item[+] Can reorder food items which run low.
+		\item[-] Food needs to be tagged (RFID, bar code, etc)
+	\end{description}
+	\vspace{1cm} 
+	\textbf{So who is going to tag the items, especially fruits, vegetables, etc?}
+	
+	$\rightarrow$ Ask the \sabsi!
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Block Diagram Overview}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.4]{flowChart}
+		\caption{\sabsi flowchart}
+	\end{figure}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Future Work}
+	\begin{itemize}
+		\item Estimate the shelf life for perishable items
+		\item Suggest recipes based on the content stored in the fridge
+		\item Add face recognition for personalized diet plans
+		\item Support the recognition of articles by crowdsourced game factor
+	\end{itemize}
+\end{frame}
+
+\end{document}
