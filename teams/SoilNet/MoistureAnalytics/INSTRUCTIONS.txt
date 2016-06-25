@@ -1,0 +1,23 @@
+Hardware:
+
+	Codes are for understanding purposes:
+
+	1. file.py for storing the data from ADC registers to local file in Raspberry Pi.
+	
+	2. adc_code.c for burning the code for data acquisition from soil sensor to ADC registers.
+
+Software/Analytics:
+	
+	Step 1: To publish soil moisture from Pi
+	
+		$ java -cp MoistureAnalytics-1.0-jar-with-dependencies.jar org.controller.PublishMoisture2
+		(note that sendata file should be present in the base directory which will store sensor data)
+	
+	Step 2: To subscribe for soil moisture on cloud
+	
+		$ java -cp MoistureAnalytics-1.0-jar-with-dependencies.jar org.controller.SubscribeMoisture
+		
+		(note: sensordata.txt file contains the received data for 3 minute window and is dynamically updated)
+		
+	Step 3: running dataAnalysis.m will plot the graph of two sensor data of 3 minute window dynamically in MATLAB	
+		
