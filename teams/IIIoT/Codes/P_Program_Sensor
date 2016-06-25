@@ -1,0 +1,154 @@
+using System;
+using System.Collections.Generic;
+using Microsoft.PSharp;
+using Microsoft.PSharp.Scheduling;
+
+namespace PingPong
+{
+    #region Events
+
+    internal class send : Event { }
+    internal class hold : Event { }
+    internal class Stop : Event { }
+    internal class Unit : Event { }
+
+    #endregion
+
+    #region Machines
+
+    [Main]
+    internal class Server : Machine
+    {
+        private Client Client;
+
+        [Initial]
+        private class Init : State
+        {
+            protected override void OnEntry()
+            {
+                (this.Machine as Server).Client =
+                    Machine.Factory.CreateMachine<Client>(this.Machine);
+                this.Raise(new Unit());
+            }
+        }
+
+        private class Playing : State
+        {
+            protected override void OnEntry()
+            {
+                this.Send((this.Machine as Server).Client, new hold());
+            }
+        }
+
+        private void Sendhold()
+        {
+            this.Send(this.Client, new hold());
+        }
+
+        private void StopIt()
+        {
+            Console.WriteLine("Server stopped.\n");
+            this.Delete();
+        }
+
+        protected override Dictionary<Type, StepStateTransitions> DefineStepStateTransitions()
+        {
+            Dictionary<Type, StepStateTransitions> dict = new Dictionary<Type, StepStateTransitions>();
+
+            StepStateTransitions initDict = new StepStateTransitions();
+            initDict.Add(typeof(Unit), typeof(Playing));
+
+            dict.Add(typeof(Init), initDict);
+
+            return dict;
+        }
+
+        protected override Dictionary<Type, ActionBindings> DefineActionBindings()
+        {
+            Dictionary<Type, ActionBindings> dict = new Dictionary<Type, ActionBindings>();
+
+            ActionBindings playingDict = new ActionBindings();
+            playingDict.Add(typeof(Unit), new Action(Sendhold));
+            playingDict.Add(typeof(send), new Action(Sendsend));
+            playingDict.Add(typeof(Stop), new Action(StopIt));
+
+            dict.Add(typeof(Playing), playingDict);
+
+            return dict;
+        }
+    }
+
+    internal class Client : Machine
+    {
+        private Machine Server;
+        private int counter;
+
+        [Initial]
+        private class Init : State
+        {
+            protected override void OnEntry()
+            {
+                (this.Machine as Client).Server = (Machine) this.Payload;
+                (this.Machine as Client).counter = 0;
+                this.Raise(new Unit());
+            }
+        }
+
+        private class Playing : State
+        {
+            protected override void OnEntry()
+            {
+                if ((this.Machine as Client).counter == 5)
+                {
+                    this.Send((this.Machine as Client).Server, new Stop());
+                    (this.Machine as Client).StopIt();
+                }
+            }
+        }
+
+        private void Sendsend()
+        {
+            this.counter++;
+            Console.WriteLine("\nTurns: {0} / 5\n", this.counter);
+            this.Send(this.Server, new send());
+            this.Raise(new Unit());
+        }
+
+        private void StopIt()
+        {
+            Console.WriteLine("Client stopped.\n");
+            this.Delete();
+        }
+
+        protected override Dictionary<Type, StepStateTransitions> DefineStepStateTransitions()
+        {
+            Dictionary<Type, StepStateTransitions> dict = new Dictionary<Type, StepStateTransitions>();
+
+            StepStateTransitions initDict = new StepStateTransitions();
+            initDict.Add(typeof(Unit), typeof(Playing));
+
+            StepStateTransitions playingDict = new StepStateTransitions();
+            playingDict.Add(typeof(Unit), typeof(Playing));
+
+            dict.Add(typeof(Init), initDict);
+            dict.Add(typeof(Playing), playingDict);
+
+            return dict;
+        }
+
+        protected override Dictionary<Type, ActionBindings> DefineActionBindings()
+        {
+            Dictionary<Type, ActionBindings> dict = new Dictionary<Type, ActionBindings>();
+
+            ActionBindings playingDict = new ActionBindings();
+            playingDict.Add(typeof(hold), new Action(Sendsend));
+            playingDict.Add(typeof(Stop), new Action(StopIt));
+
+            dict.Add(typeof(Playing), playingDict);
+
+            return dict;
+        }
+    }
+
+    #endregion
+}
